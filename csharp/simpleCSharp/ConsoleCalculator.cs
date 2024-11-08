@@ -4,7 +4,7 @@ public partial class SimpleProjects
     readonly string _pressToContinue = "Press any key to continue...";
     readonly string _enterSecondNumber = "Please enter your second number: ";
 
-    public void Calculator()
+    public void ConsoleCalculator()
     {
         float startingNumber;
         float secondNumber;
