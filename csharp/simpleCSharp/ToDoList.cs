@@ -213,7 +213,7 @@ public partial class SimpleProjects
 
     public class Task(string title, string description, TaskStatus status, DateTime dueDate)
     {
-        private static int s_idCounter = 0;
+        private static int s_idCounter = -1;
         public int Id { get; set; } = Interlocked.Increment(ref s_idCounter); // ? was it necessary?
         public string Title { get; private set; } = title; // TODO: validation
         public string Description { get; private set; } = description;
@@ -222,7 +222,7 @@ public partial class SimpleProjects
 
         public static void ResetCounter()
         {
-            s_idCounter = 0;
+            s_idCounter = -1;
         }
         public void UpdateTask(string? newTitle = null, string? newDesc = null, DateTime? newDue = null)
         {
